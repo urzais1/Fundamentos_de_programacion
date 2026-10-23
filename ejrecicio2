@@ -1,0 +1,122 @@
+print("\nEjercicio 2: Mi mascota en años humanos")
+print("\nMI MASCOTA")
+
+nombre_mascota = "tobi"
+tipo = "perro"
+edad_mascota = 10
+
+# Regla popular: 1 año de perro equivale a 7 años humanos
+edad_mascota = edad_mascota * 7
+
+# f-stringe: la f permite usar {variables} dentro del texto
+print(f"Mi {tipo} se llama {nombre_mascota}")
+print(f"Tiene {10} años de {tipo}")
+print(f"¡En años humanos tendria {70} años¡\n")
+
+
+print("\nEjercicio 3: ¿Cuanto escucho a mi artista favorito?")
+print("\nMI ARTISTA FAVORITO\n")
+
+artista = "Ousi"
+canciones_por_dia = 12
+duracion_promedio = 2.1   # minutos por cancion
+
+minutos_dia = canciones_por_dia * duracion_promedio       # minutos al dia
+minutos_año = minutos_dia * 300                           # minutos al año
+horas_año = minutos_año / 60                              # 1 hora = 60 minutos
+dias_año = horas_año / 24                                 # 1 dia = 24 horas
+
+print(f"Escuchas a {artista} {nombre_mascota} minutos al dia")
+print(f"Al año son {minutos_año} minutos")
+print(f"Eso equivale a {horas_año:.1f} horas")
+print(f"¡O sea {dias_año:.1f} dias completos escuchando a {artista}¡\n")
+
+
+print("\n♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥")
+print("Ejercicio realizado por Urzais\n")
+print("Ejercicio 4: ¿Cuánto tardo en terminar una serie?")
+
+# Damos de alta las variables
+serie = "Vikingos"
+temporadas = 5
+episodios_por_temporada = 10
+minutos_por_episodio = 50
+horas_al_dia = 2   # cuanto tiempo le dedico diario
+
+# Usamos las variables en las fórmulas
+# Total de episodios
+total_episodios = temporadas * episodios_por_temporada
+
+# Total de minutos y horas
+total_minutos = total_episodios * minutos_por_episodio
+total_horas = total_minutos / 60
+
+# ¿Cuántos días necesito?
+dias_necesarios = total_horas / horas_al_dia
+
+print("\nResultados")
+print(f"{serie} tiene {total_episodios} episodios")
+print(f"Son {total_minutos} minutos en total")
+print(f"Equivale a {total_horas:.1f} horas")
+print(f"Viendo {horas_al_dia} horas diarias, la terminas en {dias_necesarios:.1f} días")
+print("\n♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥")
+
+print("\n+++++++++++")
+print("Ejercicio 5 realizado por Urzais\n")
+print("Ejercicio 5: ¿Cuánto dura mi playlist?")
+
+# Duración de cada canción en segundos
+cancion1 = 120
+cancion2 = 120
+cancion3 = 240
+cancion4 = 180
+cancion5 = 120
+
+# Sumamos todo
+total_segundos = cancion1 + cancion2 + cancion3 + cancion4 + cancion5
+
+# // división entera: cuántos minutos completos caben
+minutos = total_segundos // 60
+
+# % residuo: los segundos que sobran
+segundos = total_segundos % 60
+
+print("\nResultados")
+print(f"Total en segundos: {total_segundos}")
+print(f"Tu playlist dura {minutos} minutos con {segundos} segundos")
+print("\n+++++++++++")
+
+
+
+print("\n************************************************************")
+print("Ejercicio 10: Reto final, ¿soy viral?")
+print("CALCULADORA DE ENGAGEMENT HECHO POR Urzais")
+
+#input() guarda texto, aquí no convertimos porque el usuario es texto
+#Si el usuario escribe mi_cuenta, ahora usuario vale "mi_cuenta"
+usuario = input("\nTu usuario de Instagram/TikTok: @")
+
+#int() convierte el texto a número entero para poder hacer cuentas
+#Si el usuario escribe 800, ahora seguidores vale 800
+seguidores = int(input("¿Cuántos seguidores tienes? "))
+#Si el usuario escribe 60, ahora likes vale 60
+likes = int(input("¿Cuántos likes tuvo tu último post? "))
+#Si el usuario escribe 12, ahora comentarios vale 12
+comentarios = int(input("¿Cuántos comentarios tuvo? "))
+
+#Sumamos todas las interacciones, esta formula dice: interacciones = 60 + 12
+#Ahora interacciones vale 72
+interacciones = likes + comentarios
+
+#Calculamos el engagement: qué porcentaje de mis seguidores interactuó
+#Los paréntesis hacen que la división se haga ANTES de multiplicar por 100
+#Esta formula dice: engagement = (72 / 800) * 100, o sea 0.09 * 100
+engagement = (interacciones / seguidores) * 100
+#Ahora engagement vale 9.0
+
+print(f"\n******************** RESULTADOS DE @{usuario} ********************")
+print(f"Interacciones totales: {interacciones}")
+#El :.2f muestra 2 decimales, así que se ve 9.00%
+print(f"Engagement: {engagement:.2f}%")
+print("\nDato: en redes, un engagement arriba de 3% ya se considera bueno")
+print("\n************************************************************")

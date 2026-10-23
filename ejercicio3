@@ -1,0 +1,146 @@
+print("\n============================================================")
+print("Ejercicio 6: Vidas y daño")
+print("========================= BATALLA =========================")
+#Damos de alta la variable personaje y vida
+personaje = "Link"
+vida = 100
+print(f"\nMi personaje se llama {"Batman"} y empieza con {"100"} de vida")
+#Como vida vale 100, esta formula dia: vida = 100 - 30
+vida = vida - 70
+print(f"Me dio un golpe de un goblin, ahora tengo vida: {60}")
+#Ahora vida vale 75, esta formula dice: vida = 70 - 10
+vida = vida - 60
+print(f"Ah, ahora me toco el golpe de un ogro, tengo de vida: {20}")
+#Ahora vida vale 35, esta formula dice: vida = 60 - 40
+vida = vida - 20
+print(f"Me toco una flecha enemiga!, tengo de vida: {10}")
+#Ahora vida vale 20, esta formula dice: vida = 20 + 10
+vida = vida + 10
+print(f"Tomó una poción... mi vida: {100}")
+
+print(f"\n{"Batman"} terminó la batalla con {100} HP\n")
+print("============================================================")
+
+print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+print("Ejercicio 7: Subir de nivel")
+print("SUBIR DE NIVEL")
+#Damos de alta las variables: la XP que tengo, la que necesito y la que gano por partida
+xp_actual = 1000
+xp_siguiente_nivel = 1500
+xp_por_partida = 50
+print(f"\nTengo {xp_actual} de XP y necesito {xp_siguiente_nivel} para subir de nivel")
+print(f"En cada partida gano {xp_por_partida} de XP")
+
+#Calculamos cuánta XP me falta, esta formula dice: xp_faltante = 2000 - 1250
+xp_faltante = xp_siguiente_nivel - xp_actual
+print(f"Me faltan {xp_faltante} de XP")
+
+#Calculamos cuántas partidas COMPLETAS necesito
+#El // es división entera: solo da el número completo, sin decimales
+#Esta formula dice: partidas = 750 // 120, que da 6 (porque 120 x 6 = 720)
+partidas = xp_faltante // xp_por_partida
+print(f"Con {partidas} partidas llego casi al nivel")
+
+#Calculamos cuánta XP sobra después de esas partidas
+#El % es el residuo: lo que sobra de la división
+#Esta formula dice: xp_sobrante = 750 % 120, que da 30 (porque 750 - 720 = 30)
+xp_sobrante = xp_faltante % xp_por_partida
+print(f"Pero todavía me faltarían {xp_sobrante} de XP, así que necesito jugar una partida más")
+
+#Sumamos 1 partida más para cubrir la XP que falta, esta formula dice: partidas_totales = 6 + 1
+partidas_totales = partidas + 1
+print(f"\nEn total necesito jugar {partidas_totales} partidas para subir de nivel\n")
+print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+
+print("\n************************************************************")
+print("Ejercicio 8: Mi tiempo de pantalla")
+print("n*********************** TIEMPO DE PANTALLA n********************")
+#Damos de alta la variable app y las horas que paso al día
+app = "TikTok"
+horas_diarias = 10
+print(f"\nPaso {horas_diarias} horas diarias en {app}")
+
+#Calculamos las horas al año, esta formula dice: horas_anio = 4 * 365
+horas_anio = horas_diarias * 365
+print(f"Al año son {horas_anio} horas")
+
+#Convertimos las horas a días completos (1 día tiene 24 horas)
+#Esta formula dice: dias_anio = 1460 / 24, que da 60.83333
+dias_anio = horas_anio / 24
+#El :.1f muestra solo 1 decimal, así que se ve 60.8
+print(f"¡Eso equivale a {dias_anio:.1f} días completos sin parar!")
+
+#Calculamos cuántos meses son (un mes tiene aprox. 30 días)
+#Esta formula dice: meses = 60.8 / 30
+meses = dias_anio / 30
+print(f"\nO sea, casi {meses:.1f} meses de mi año se van en {app}\n")
+print("************************************************************")
+
+
+print("\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+print("Ejercicio 9: Tienda de mascotas interactiva")
+print("TIENDA DE MASCOTAS DE Urzais")
+#input() le pregunta al usuario y guarda lo que escribe en la variable
+#input() SIEMPRE guarda TEXTO, aunque escribas un número
+mascota = input("\n¿Qué mascota quieres adoptar? ")
+#Si el usuario escribe gato, ahora mascota vale "gato"
+
+#float() convierte el texto a número con decimales para poder hacer cuentas
+precio_mascota = float(input(f"¿Cuánto cuesta el/la {mascota}? $"))
+#Si el usuario escribe 1500, ahora precio_mascota vale 1500.0
+precio_croquetas = float(input("¿Cuánto cuesta un mes de croquetas? $"))
+#Si el usuario escribe 350, ahora precio_croquetas vale 350.0
+#int() convierte el texto a número entero, porque los meses no llevan decimales
+meses = int(input("¿Para cuántos meses quieres croquetas? "))
+#Si el usuario escribe 3, ahora meses vale 3
+
+#Calculamos cuánto gasto en croquetas, esta formula dice: costo_croquetas = 350.0 * 3
+costo_croquetas = precio_croquetas * meses
+#Ahora costo_croquetas vale 1050.0
+
+#Calculamos el total, esta formula dice: total = 1500.0 + 1050.0
+total = precio_mascota + costo_croquetas
+#Ahora total vale 2550.0
+
+print("\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+print("Ticket de compra")
+#El :.2f muestra 2 decimales, como se ve el dinero
+print(f"Mascota: {mascota}  ${precio_mascota:.2f}")
+print(f"Croquetas por {meses} meses: ${costo_croquetas:.2f}")
+print(f"\nTOTAL A PAGAR: ${total:.2f}\n")
+print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+
+
+print("\n************************************************************")
+print("Ejercicio 10: Reto final, ¿soy viral?")
+print("CALCULADORA DE ENGAGEMENT HECHO POR Urzais")
+
+#input() guarda texto, aquí no convertimos porque el usuario es texto
+#Si el usuario escribe mi_cuenta, ahora usuario vale "mi_cuenta"
+usuario = input("\nTu usuario de Instagram/TikTok: @")
+
+#int() convierte el texto a número entero para poder hacer cuentas
+#Si el usuario escribe 800, ahora seguidores vale 800
+seguidores = int(input("¿Cuántos seguidores tienes? "))
+#Si el usuario escribe 60, ahora likes vale 60
+likes = int(input("¿Cuántos likes tuvo tu último post? "))
+#Si el usuario escribe 12, ahora comentarios vale 12
+comentarios = int(input("¿Cuántos comentarios tuvo? "))
+
+#Sumamos todas las interacciones, esta formula dice: interacciones = 60 + 12
+#Ahora interacciones vale 72
+interacciones = likes + comentarios
+
+#Calculamos el engagement: qué porcentaje de mis seguidores interactuó
+#Los paréntesis hacen que la división se haga ANTES de multiplicar por 100
+#Esta formula dice: engagement = (72 / 800) * 100, o sea 0.09 * 100
+engagement = (interacciones / seguidores) * 100
+#Ahora engagement vale 9.0
+
+print(f"\n******************** RESULTADOS DE @{usuario} ********************")
+print(f"Interacciones totales: {interacciones}")
+#El :.2f muestra 2 decimales, así que se ve 9.00%
+print(f"Engagement: {engagement:.2f}%")
+print("\nDato: en redes, un engagement arriba de 3% ya se considera bueno")
+print("\n************************************************************")

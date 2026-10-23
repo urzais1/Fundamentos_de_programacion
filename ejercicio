@@ -1,0 +1,38 @@
+print("Actividad 2 Ejercicios del dia martes de Urzais")
+
+# como dar de alta variables tipo texto, en phyton se llaman str
+Mi_Artista_Favorito = "Drake"
+miartista_favorito = "Ousi"
+
+# como dar de alta variables tipo numero entero, en phyton se llaman int
+MiEdad = 19
+
+# como dar de alta variables decimales, en phyton float
+horas_llegar_uni = 1.5
+edad = 17.5
+ahorros = 650000.45
+
+# como dar de alta variables es
+print(type(miartista_favorito))
+print(type(MiEdad))
+print(type(ahorros))
+
+print("*****************")
+print("Mi perfil gamer")
+
+ # dar de alta las variables de mi gamer tag
+gamertag = "URZ"                 #str (texto)
+edad = 19                        #int o float
+juego_favorito = "fortnite"      #str (texto)
+nivel = 100                      #int o float
+horas_jugadas = 270              #int o float
+tiene_soporte_tecnico = False    #variable booleana
+
+#imprimir tipo de variable
+print("*** Aqui imprimo el tipo de variable de mi gamertag ***")
+print(type(gamertag))
+print(type(edad))
+print(type(juego_favorito))
+print(type(nivel))
+print(type(horas_jugadas))
+print(type(tiene_soporte_tecnico))
